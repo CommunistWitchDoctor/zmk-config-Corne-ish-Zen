@@ -10,6 +10,206 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+
+behaviors {
+      hm: homerow_mods {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOMEROW_MODS";
+        #binding-cells = <2>;
+        tapping_term_ms = <300>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&kp>;
+    };
+      sf: holdtap_shift {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOLDTAP_SHIFT";
+        #binding-cells = <2>;
+        tapping_term_ms = <300>;
+        flavor = "hold-preferred";
+        bindings = <&kp>, <&kp>;
+    };
+      ltt: layertap_layer {
+        compatible = "zmk,behavior-hold-tap";
+        label = "LAYERTAP_LAYER";
+        #binding-cells = <2>;
+        tapping_term_ms = <300>;
+        flavor = "hold-preferred";
+        bindings = <&mo>, <&kp>;
+    };
+
+    combos {
+    compatible = "zmk,combos";
+    combo_1 {
+        timeout-ms = <50>;
+        key-positions = <0 10>;
+        bindings = <&kp N1>;
+        layers = <0>;
+    };
+    combo_2 {
+        timeout-ms = <50>;
+        key-positions = <1 11>;
+        bindings = <&kp N2>;
+        layers = <0>;
+    };
+    combo_3 {
+        timeout-ms = <50>;
+        key-positions = <2 12>;
+        bindings = <&kp N3>;
+        layers = <0>;
+    };
+    combo_4 {
+        timeout-ms = <50>;
+        key-positions = <3 13>;
+        bindings = <&kp N4>;
+        layers = <0>;
+    };
+    combo_5 {
+        timeout-ms = <50>;
+        key-positions = <4 14>;
+        bindings = <&kp N5>;
+        layers = <0>;
+    };
+    combo_6 {
+        timeout-ms = <50>;
+        key-positions = <5 15>;
+        bindings = <&kp N6>;
+        layers = <0>;
+    };
+    combo_7 {
+        timeout-ms = <50>;
+        key-positions = <6 16>;
+        bindings = <&kp N7>;
+        layers = <0>;
+    };
+    combo_8 {
+        timeout-ms = <50>;
+        key-positions = <7 17>;
+        bindings = <&kp N8>;
+        layers = <0>;
+    };
+    combo_9 {
+        timeout-ms = <50>;
+        key-positions = <8 18>;
+        bindings = <&kp N9>;
+        layers = <0>;
+    };
+    combo_0 {
+        timeout-ms = <50>;
+        key-positions = <9 19>;
+        bindings = <&kp N0>;
+        layers = <0>;
+    };
+    combo_lalt {
+        timeout-ms = <50>;
+        key-positions = <21 22>;
+        bindings = <&kp LALT>;
+    };
+    combo_lgui {
+        timeout-ms = <50>;
+        key-positions = <22 23>;
+        bindings = <&kp LGUI>;
+    };
+     combo_lctrl {
+        timeout-ms = <50>;
+        key-positions = <23 24>;
+        bindings = <&kp LCTRL>;
+    };
+     combo_lctrlalt {
+        timeout-ms = <50>;
+        key-positions = <21 22 23 24>;
+        bindings = <&kp LC(LALT)>;
+    };
+     combo_lctrlgui {
+        timeout-ms = <50>;
+        key-positions = <22 23 24>;
+        bindings = <&kp LC(LGUI)>;
+    };
+    combo_ralt {
+        timeout-ms = <50>;
+        key-positions = <27 28>;
+        bindings = <&kp RALT>;
+    };
+    combo_rgui {
+        timeout-ms = <50>;
+        key-positions = <26 27>;
+        bindings = <&kp RGUI>;
+    };
+     combo_rctrl {
+        timeout-ms = <50>;
+        key-positions = <25 26>;
+        bindings = <&kp RCTRL>;
+    };
+     combo_rctrlalt {
+        timeout-ms = <50>;
+        key-positions = <25 26 27 28>;
+        bindings = <&kp RC(RALT)>;
+    };
+     combo_rctrlgui {
+        timeout-ms = <50>;
+        key-positions = <25 26 27>;
+        bindings = <&kp RC(RGUI)>;
+    };
+    combo_bspc {
+        timeout-ms = <50>;
+        key-positions = <8 9>;
+        bindings = <&kp BKSP>;
+        layers = <0 1>;
+    };
+    combo_tab {
+        timeout-ms = <50>;
+        key-positions = <3 4>;
+        bindings = <&kp TAB>;
+        layers = <0>;
+    };
+    combo_caps {
+        timeout-ms = <50>;
+        key-positions = <5 6>;
+        bindings = <&kp CAPS>;
+        layers = <0>;
+    };
+    combo_ins {
+        timeout-ms = <50>;
+        key-positions = <15 16>;
+        bindings = <&kp INS>;
+        layers = <0>;
+    };
+    combo_bkupctrl {
+        timeout-ms = <50>;
+        key-positions = <30 31>;
+        bindings = <&kp LCTRL>;
+        layers = <0>;
+    };
+    combo_esc {
+        timeout-ms = <50>;
+        key-positions = <13 14>;
+        bindings = <&kp ESC>;
+        layers = <0>;
+    };
+    combo_nav {
+        timeout-ms = <50>;
+        key-positions = <31 32>;
+        bindings = <&mo 3>;
+        layers = <0>;
+    };
+    combo_fncesc {
+        timeout-ms = <50>;
+        key-positions = <31 34>;
+        bindings = <&lt 4 ESC>;
+    };
+    combo_ttab {
+        timeout-ms = <50>;
+        key-positions = <33 34>;
+        bindings = <&kp TAB>;
+        layers = <0>;
+    };
+    combo_play {
+        timeout-ms = <75>;
+        key-positions = <30 31 32 33 34 35>;
+        bindings = <&kp C_PP>;
+    };
+};
+
+};
         keymap {
                 compatible = "zmk,keymap";
 
